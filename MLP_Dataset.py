@@ -3,14 +3,14 @@ import pandas as pd
 import scipy
 from sknn.mlp import Classifier, Regressor, Layer
 
-#f = pd.read_csv('Dataset.csv', delimiter = '\t')
+#f = pd.read_csv('Created_Dataset.csv', delimiter = '\t')
 #df = pd.DataFrame(f)
 
-X = np.loadtxt('Dataset.txt', usecols=[1, 2])
-y = np.loadtxt('Dataset.txt', usecols=[3])
+X = np.loadtxt('Created_Dataset.txt', usecols=[1, 2])
+y = np.loadtxt('Created_Dataset.txt', usecols=[3])
 
-#print X
-#print y
+# print X
+# print y
 
 nn = Classifier(
         layers=[
@@ -21,14 +21,14 @@ nn = Classifier(
         n_iter=100
     )
 
-#print(y)
+# print(y)
 
-nn.fit(X,y)
+nn.fit(X, y)
 
 parameters = nn.get_parameters()
 
-y_answer = nn.predict(np.array([[2, 25]]))
+y_answer = nn.predict(np.array([[3.7, 19]]))
 
-print(parameters);
+print(parameters)
 
-print(y_answer);
+print(y_answer)
