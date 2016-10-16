@@ -1,8 +1,8 @@
 import numpy as np
 from sknn.mlp import Classifier, Layer
 
-X = np.loadtxt('Dataset.txt', usecols=[1, 2])
-y = np.loadtxt('Dataset.txt', usecols=[3])
+X = np.loadtxt('Created_Dataset.txt', usecols=[1, 2])
+y = np.loadtxt('Created_Dataset.txt', usecols=[3])
 
 # X_temp = np.array([[0,0],[1,1]])
 # y_temp = np.array([1,1])
