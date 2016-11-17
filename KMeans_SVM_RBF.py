@@ -90,8 +90,3 @@ for i in range (1,9):
 print "Accuracy : " + str(sum(acc_SVM)/len(acc_SVM))
 print "Precision : " + str(sum(prec_SVM)/len(prec_SVM))
 print "Recall : " + str(sum(rec_SVM)/len(rec_SVM))
-
-
-
-
-
