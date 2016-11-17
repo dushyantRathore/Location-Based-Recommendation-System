@@ -9,7 +9,7 @@ import plotly
 import plotly.plotly as py
 import plotly.graph_objs as go
 
-#Global Arrays
+# Global Arrays
 mclass_PNN = []
 prec_PNN = []
 rec_PNN = []
@@ -46,7 +46,7 @@ for s in sigma:
             if j == 1:
                 c = c + 1
 
-        #print "The no of 1's in Training Set : " + str(c)
+        # print "The no of 1's in Training Set : " + str(c)
 
         # Form the Testing Set
         X_Test_DF = Test.ix[:, 2:5]
@@ -56,19 +56,19 @@ for s in sigma:
         Y_Test = np.asarray(Y_list2)
 
         kmeans = KMeans(n_clusters = cluster_size, random_state=0).fit(X_Train)
-        #print len(kmeans.labels_)
+        # print len(kmeans.labels_)
 
         pred = kmeans.predict(X_Train)
 
-        #print "Prediction Array : "
-        #print pred
+        # print "Prediction Array : "
+        # print pred
 
         for k in range(0, len(pred)):
             if Y_Train[k] == 1:
                 cluster_array[pred[k]] += 1
 
-        #print "Cluster Array : "
-        #print cluster_array
+        # print "Cluster Array : "
+        # print cluster_array
 
         m = max(cluster_array)
 
@@ -77,7 +77,7 @@ for s in sigma:
             if cluster_array[l] == m:
                 index = l
 
-        #print "Index Value : " + str(index)
+        # print "Index Value : " + str(index)
 
         # print cluster_array
 
@@ -112,7 +112,7 @@ print "Recall : "
 print rec_PNN
 
 
-#Graph Plotting
+# Graph Plotting
 
 plotly.tools.set_credentials_file(username='dushyantRathore', api_key='5bzzn2vxpr')
 
